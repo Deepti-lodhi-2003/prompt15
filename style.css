@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px solid gray;
+    position: relative;
+}
+header .logo img {
+    width: 4.5vw;
+}
+header nav {
+    display: flex;
+    gap: 45px;
+}
+header nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+header .menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+header .user {
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-items: center;
+    order: 2;
+}
+header .menu-icon {
+    order: 3;
+}
+header .user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.main-section {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 300px; 
+padding: 50px;
+}
+.main-section .image-container {
+display: flex;
+width:500px;
+height: 500px;
+margin-top: 4%;
+margin-left: 5%;
+justify-content: center; 
+border-radius: 50%;
+background-color: hwb(120 4% 29% / 0.781);
+}
+.main-section .image-container img {
+width: 100%; 
+max-width: 500px; 
+border-radius: 10px;
+transform:translate(10%, -22%);
+}
+.main-section .content-container {
+flex: 1; 
+padding-right: 10%;
+}
+.main-section .content-container h1 {
+font-size: 4.5rem;
+font-weight: 700;
+margin-bottom: 27px;
+}
+.main-section .content-container p {
+font-size: 1.3rem;
+margin-bottom: 40px;
+word-spacing: 5px;
+}
+.main-section .content-container .price-button {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.main-section .content-container .price {
+font-size: 1.9rem;
+color: orangered;
+font-weight: bold;
+}
+.main-section .content-container button {
+padding: 10px 20px;
+font-size: 1rem;
+background-color: #111;
+color: white;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+}
+.main-section .content-container button:hover{
+background-color: white;
+color: black;
+box-shadow: 2px 2px 10px black;
+}
+.actions {
+    display: flex;
+    gap: 25px;
+    margin: 80px 0;
+    margin-left: 10%;
+}
+.actions .active{
+    background-color: #111;
+    color: white;
+}
+.actions button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: 1px solid #111;
+    background-color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 22%;
+    position: relative;
+}
+.card:hover{
+    background: #111;
+    color: white;
+}
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+.card h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.card .rating {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.card .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.cart-color{
+    color:#4B5945;
+    font-weight: 700;
+}
+.cart-price{
+    font-size: 1.3rem;
+    color: orangered;
+}
+@media screen and (max-width: 600px) {
+header {
+    flex-direction: row; 
+    align-items: flex-start;
+    padding: 20px;
+}
+header .logo img {
+    padding-left: 0;
+    width: 25%; 
+}
+header nav {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        border-top: 1px solid gray;
+        padding: 10px 20px;
+    }
+header nav.active {
+        display: flex;
+    }
+header .menu-icon {
+        display: block;
+        margin-right: 3%;
+    }
+header .user {
+    margin-top: 10px;
+    margin-right: 35%;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+.main-section {
+    flex-direction: column; 
+    padding: 20px;
+    gap: 20px;
+    text-align: center; 
+}
+.main-section .image-container {
+    width: 80%; 
+    height: auto;
+    margin: 0 auto; 
+}
+.main-section .image-container img {
+    transform: none; 
+}
+.main-section .content-container {
+    padding: 0;
+}
+.main-section .content-container h1 {
+    font-size: 2rem; 
+}
+.main-section .content-container p {
+    font-size: 1rem; 
+    word-spacing: normal; 
+}
+.main-section .content-container .price {
+    font-size: 1.5rem; 
+}
+.main-section .content-container button {
+    padding: 10px 20px;
+    font-size: 0.9rem; 
+}
+
+.actions {
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-left: 0;
+}
+.actions button {
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+.cards {
+    flex-direction: column; 
+    align-items: center;
+}
+.card {
+    width: 90%; 
+    margin-bottom: 20px; 
+}
+.card .rating {
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem; 
+}
+.card img {
+    width: 100%;
+}
+.card h4 {
+    font-size: 1rem; 
+}
+.card .info {
+    font-size: 0.9rem; 
+}
+}
