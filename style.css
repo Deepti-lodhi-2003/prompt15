@@ -15,7 +15,7 @@ header {
     position: relative;
 }
 header .logo img {
-    width: 4.8vw;
+    width:5vw;
 }
 header nav {
     display: flex;
